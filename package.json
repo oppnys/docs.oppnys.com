@@ -1,5 +1,6 @@
 {
   "name": "doc.oppnys.com",
+  "author": "oppnys",
   "version": "1.0.0",
   "main": "index.js",
   "license": "MIT",
@@ -8,6 +9,7 @@
     "build": "vuepress build docs"
   },
   "devDependencies": {
+    "@vuepress/plugin-docsearch": "^2.0.0-beta.36",
     "vuepress": "^2.0.0-beta.36"
   }
 }

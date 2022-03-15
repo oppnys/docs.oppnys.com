@@ -1,4 +1,4 @@
-## Vue
+## Vue2
 
 ### Vue 的数据双向绑定
 
@@ -35,22 +35,86 @@ Object.defineProperty(obj, key, {
 });
 ```
 
-### vue 的生命周期
+### Vue 的生命周期
 
 - `beforeCreate`
 
-> 创建之前，此时还没有 data 和 method
+  > 创建之前，此时还没有 data 和 methods
 
 - `created`
 
+  > 创建完成，此时 data 和 methods 可用
+
+  > 在 created 之后 beforeMounted 之前如果没有 el 选项此生命周期结束，停止编译，如果有则继续
+
 - `beforeMount`
+
+  > 在渲染之前
 
 - `mounted`
 
+  > 页面已经渲染完成，并且 `vm` 实例中已经添加完 `$el` 了，已经替换掉那些 DOM 元素了（模板中的变量），这个时候已经可以操作 DOM 了（但是获取不了 DOM 的属性，如需获取使用 `nextTick`）
+
 - `beforeUpdate`
+
+  > `data`改变后，对应的组件重新渲染之前
 
 - `updated`
 
-- `beforeDestory`
+  > `data` 改变后，对应的组件重新渲染完成
 
-- `destoryed`
+- `beforeDestroy`
+
+  > 在当前实例销毁之前，此时实例仍然可用。一般在此执行清空有副作用的引用
+
+- `destroyed`
+
+  > 实例销毁后
+
+vue2 生命周期示意图
+
+![vue2 生命周期示意图](https://cn.vuejs.org/images/lifecycle.png)
+
+### Vue 中父子组件的生命周期
+
+- 父子组件的生命周期是一个嵌套的过程
+
+- 渲染的过程
+
+  > 父 `beforeCreate` -> 父 `created` -> 父`beforeMounted` -> 子 `beforeCreate` -> 子 `created` -> 子 `beforeMounted` -> 子`mounted`-> 父`mounted`
+
+- 子组件更新的过程
+
+  > 父`beforeUpdate` -> 子 `beforeUpdate` -> 子 `updated` -> 父`updated`
+
+- 父组件更新的过程
+
+  > 父`bodoreUpdate` -> 父`updated`
+
+- 销毁过程
+
+  > 父`beforeDestroy` -> 子 `beforeDestroy` -> 子 `destroyed` -> 父 `destroyed`
+
+### Vue 中的 `nextTick`
+
+- 解释
+
+  > `nextTick`: 在下次 DOM 更新循环结束之后执行延迟回调。在修改数据之后立即使用这个方法，获取更新后的 DOM。
+
+- 应用
+
+  - 想要在 Vue 生命周期函数中的 `created()` 操作 DOM 可以使用 `Vue.nextTick()` 回调函数.
+
+  - 在数据改变后要执行的操作，而这个操作需要等数据改变后而改变 DOM 结构的时候才进行操作，需要用到 nextTick.
+
+### `computed` 和 `watch` 的区别
+
+- `computed`
+
+  > 计算属性，依赖其他属性，当其他属性改变的时候下一次获取 `computed` 值也会改变， `computed` 的值会有缓存。
+
+- `watch`
+
+  - 侦听属性，类似于数据改变后的回调
+  - 如果需要深度监听，需要配置 `deep: true`
+  - 如果监听完立马运行，需要配置 `immediate: true`

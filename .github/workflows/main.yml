@@ -2,7 +2,7 @@ name: Auto Publish Docs Website # 自动部署的名称
 on:
   push:
     tags: # 当我们提交代码为tag 是以'v'开头的时候才会触发自动部署到服务端 如 git push tag v0.1.0
-    - 'v*'
+      - "v*"
     #branches:
     #- master
 jobs:
@@ -18,7 +18,8 @@ jobs:
         uses: actions/setup-node@master
       - run: npm install # 安装第三方包
       - run: npm run build # 打包
-      - run: tar -zcvf release.tgz docs/.vuepress/dist/
+      - run: cd docs/.vuepress/
+      - run: tar -zcvf release.tgz dist
       # 把dist等文件，打包压缩为release.tgz
 
       # 第三步：发布 Release
@@ -55,7 +56,7 @@ jobs:
           port: ${{ secrets.PORT }} #配置的端口
           script:
             | # 执行命令（运行到服务器）cd：要确保服务器有这个目录； wget：下载上一步的release到服务器； tar：解压； 安装依赖；启动服务
-            cd /data/www/wwwroot/docs.oppnys.com
+            cd /www/wwwroot/docs.oppnys.com
             wget https://github.com/oppnys/docs.oppnys.com/releases/latest/download/release.tgz -O release.tgz
             tar zxvf release.tgz
             yes | cp -r -f dist/* ./

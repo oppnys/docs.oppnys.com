@@ -18,9 +18,7 @@ jobs:
         uses: actions/setup-node@master
       - run: npm install # 安装第三方包
       - run: npm run build # 打包
-      - run: cd docs/.vuepress/
-      - run: ls -l
-      - run: tar -zcvf release.tgz dist
+      - run: tar -zcvf release.tgz docs/.vuepress/dist/*
       # 把dist等文件，打包压缩为release.tgz
 
       # 第三步：发布 Release
@@ -60,4 +58,4 @@ jobs:
             cd /www/wwwroot/docs.oppnys.com
             wget https://github.com/oppnys/docs.oppnys.com/releases/latest/download/release.tgz -O release.tgz
             tar zxvf release.tgz
-            yes | cp -r -f dist/* ./
+            yes | cp -r -f docs/.vuepress/dist/* ./

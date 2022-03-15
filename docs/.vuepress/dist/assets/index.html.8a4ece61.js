@@ -1,0 +1,1 @@
+const t={key:"v-e02a086e",path:"/javascript/",title:"",lang:"zh-CN",frontmatter:{},excerpt:"",headers:[{level:3,title:"JavaScript",slug:"javascript",children:[]}],git:{updatedTime:1647248354e3,contributors:[{name:"dongtian",email:"dongtian.liu@dalichain.io",commits:1}]},filePathRelative:"javascript/README.md"};export{t as data};

@@ -1,0 +1,1 @@
+const t={key:"v-14b2ee8b",path:"/html/",title:"",lang:"zh-CN",frontmatter:{},excerpt:"",headers:[{level:3,title:"HTML",slug:"html",children:[]}],git:{updatedTime:1647248354e3,contributors:[{name:"dongtian",email:"dongtian.liu@dalichain.io",commits:1}]},filePathRelative:"html/README.md"};export{t as data};

@@ -34,6 +34,10 @@ module.exports = {
                 link: '/vue3/'
             },
             {
+                text: '脚手架',
+                link: '/cli/'
+            },
+            {
                 text: '数据结构与算法',
                 link: '/algorithm/'
             }

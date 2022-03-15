@@ -46,7 +46,7 @@ module.exports = {
         contributors: true,
         contributorsText: '作者',
         lastUpdatedText: '更新时间'
-    },
+    }
     // plugins: [
     //     ['@vuepress/docsearch', {
     //         apiKey: '790e17cfe1a90b77b83aa6b9f4b83b32',

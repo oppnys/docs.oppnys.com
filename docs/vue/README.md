@@ -1,5 +1,7 @@
 ## Vue2
 
+[Vue 源码解析](/vue/code.html)
+
 ### Vue 的数据双向绑定
 
 数据劫持： vue 是采用数据劫持结合发布者-订阅者模式的方式，通过 <b>Object.defineProperty()</b> 来劫持各个属性的 gettter 和 setter，在数据变动时发布消息给订阅者，触发相应的回调。

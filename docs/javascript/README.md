@@ -477,3 +477,19 @@ console.log("10");
 - 不能 `new`
   - 没有自己的 `this`, 不能调用 `call` 和 `apply`
   - 没有 `prototype`, new 关键字内部需要把新对象的 `_proto_` 指向函数的`prototype`
+
+### `==` 与 `===` 的区别
+
+- `===` 严格意义上的相等，会比较两边的数据类型和值大小
+
+  - 数据类型不同返回 false
+  - 数据类型相同，但值大小不同，返回 false
+
+- `==` 是非严格意义上的相等，
+
+  - 数据类型相同，比较值
+  - 数据类型不同
+    - Null == Undefined ->true
+    - String == Number ->先将 String 转为 Number，在比较大小
+    - Boolean == Number ->现将 Boolean 转为 Number，在进行比较
+    - Object == String，Number，Symbol -> Object 转化为原始类型

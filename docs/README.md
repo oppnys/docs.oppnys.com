@@ -6,6 +6,8 @@
 
 ## [JavaScript 太难了](/javascript/)
 
+## [正则表达式](/reg/)
+
 ## [Vue 要经常用](/vue/)
 
 ## [Vue3 写起来很爽呀](/vue3/)

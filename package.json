@@ -6,7 +6,8 @@
   "license": "MIT",
   "scripts": {
     "start": "vuepress dev docs",
-    "build": "vuepress build docs"
+    "build": "vuepress build docs",
+    "commit": "git-cz"
   },
   "devDependencies": {
     "@vuepress/plugin-docsearch": "^2.0.0-beta.36",

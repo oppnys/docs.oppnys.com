@@ -493,3 +493,44 @@ console.log("10");
     - String == Number ->先将 String 转为 Number，在比较大小
     - Boolean == Number ->现将 Boolean 转为 Number，在进行比较
     - Object == String，Number，Symbol -> Object 转化为原始类型
+
+### 节流
+
+:::info
+n 秒内只执行一次，若在 n 秒内重复触发，只执行一次
+:::
+
+```js
+function throttle(fn, wait = 100) {
+  let timer;
+  return function () {
+    let _this = this;
+    let args = arguments;
+    if (!timer) {
+      timer = setTimeout(() => {
+        timer = null;
+        fn.apply(_this, args);
+      }, wait);
+    }
+  };
+}
+```
+
+### 防抖
+
+:::info
+n 秒后在执行该事件，若在 n 秒内被重复触发，则重新计时
+:::
+
+```js
+function debounce(fn, delay) {
+  let timeout;
+  return function () {
+    let args = arguments;
+    if (timeout) clearTimeout(timeout);
+    timeout = setTimeout(() => {
+      fn(args);
+    }, delay);
+  };
+}
+```

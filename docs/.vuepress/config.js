@@ -23,16 +23,7 @@ module.exports = {
             },
             {
                 text: 'JavaScript',
-                children: [{
-                    text: 'JS 基础',
-                    link: '/javascript/',
-                    activeMatch: '/javascript',
-                }, {
-                    text: 'JS 三座大山',
-                    activeMatch: '^/javascript\/ThreeMountains/',
-                    link: '/javascript/ThreeMountains/'
-                }],
-
+                link: '/javascript/'
             },
             {
                 text: 'Vue2',

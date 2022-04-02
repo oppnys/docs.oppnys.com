@@ -49,6 +49,10 @@ module.exports = {
             {
                 text: '数据结构与算法',
                 link: '/algorithm/'
+            },
+            {
+                text: '随笔',
+                link: '/essay/'
             }
         ],
         repo: 'https://github.com/oppnys/docs.oppnys.com',

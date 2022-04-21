@@ -4,4 +4,4 @@
 
 ### [三座大山](/javascript/ThreeMountains.html)
 
-### [面试题](/javascript/interview)
+### [面试题](/javascript/interview.html)

@@ -63,11 +63,11 @@ Function.prototype.Mybind = function (context) {
   // 返回一个函数
   return function F(){
       if(this instanceof F){
-           //返回一个空对象，且使创建出来的实例的__proto__指向_this的prototype，且完成函数柯里化
-          return new that(..args, ...arguments)
+           //返回一个空对象，且使创建出来的实例的__proto__指向that的prototype，且完成函数柯里化
+          return new that(...args, ...arguments)
       }
       // 如果不是new出来的改变this指向，且完成函数柯里化
-      return _this.applu(contect, args.concat(...arguments))
+      return that.apply(contect, args.concat(...arguments))
   };
 };
 ```

@@ -42,6 +42,10 @@ module.exports = {
                 link: '/algorithm/'
             },
             {
+                text: '计算机网络',
+                link: '/network/'
+            },
+            {
                 text: '随笔',
                 link: '/essay/'
             }

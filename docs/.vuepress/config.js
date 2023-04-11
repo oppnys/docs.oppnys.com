@@ -26,16 +26,34 @@ module.exports = {
                 link: '/javascript/'
             },
             {
-                text: 'Vue2',
-                link: '/vue/'
-            },
-            {
-                text: 'Vue3',
-                link: '/vue3/'
+                text: '前端框架',
+                children: [
+                    {
+                        text: 'Vue2',
+                        link: '/vue/'
+                    },
+                    {
+                        text: 'Vue3',
+                        link: '/vue3/'
+                    },
+                    {
+                        text: 'react',
+                        link: '/react/'
+                    },
+                ]
             },
             {
                 text: '脚手架',
-                link: '/cli/'
+                children: [
+                    {
+                        text: 'webpack',
+                        link: '/cli/webpack/'
+                    },
+                    {
+                        text: 'babel',
+                        link: '/cli/babel/'
+                    },
+                ]
             },
             {
                 text: '数据结构与算法',
@@ -44,6 +62,10 @@ module.exports = {
             {
                 text: '计算机网络',
                 link: '/network/'
+            },
+            {
+                text: 'node.js',
+                link: '/node.js/'
             },
             {
                 text: '随笔',

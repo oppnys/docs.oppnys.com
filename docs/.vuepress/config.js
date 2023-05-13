@@ -68,6 +68,10 @@ module.exports = {
                 link: '/node.js/'
             },
             {
+                text: 'Linux',
+                link: '/linux/'
+            },
+            {
                 text: '随笔',
                 link: '/essay/'
             }

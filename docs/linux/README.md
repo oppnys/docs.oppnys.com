@@ -76,7 +76,7 @@ firewall-cmd --list-all
 firewall-cmd --reload
 ```
 
-### Github Action 部署
+## Github Action 部署
 
 #### 一、为啥子要使用 Github Action?
 随着前后端项目的分离，前端项目的部署无非就是把打包之后的代码丢到 nginx 指定的静态资源目录下就完事了，但是随着项目升级迭代，每次都需要进行 打包、登录服务器、上传代理。频繁地操作让人很难受。所以目前市面上有很多自动化构建工具，比如 jenkins之类的。之前在网上看到 Github Action 后，便想尝试一下，下面是我进行配置的过程，大部分来自Ctrl C, 遇到的一些问题谨在此做一个记录。

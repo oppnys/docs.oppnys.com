@@ -354,3 +354,50 @@ const events = require('events')
 const emitter = new events.EventEmitter()
 emitter.emit('touch', {name: 'oppnys'}) 
 ```
+
+
+## npm 常用命令
+
+创建链接
+```shell
+npm link
+```
+
+去除软连
+
+```shell
+npm unlink
+```
+
+查看所有全局链接
+
+```shell
+npm ls --global --depth 0 
+```
+
+删除全局链接
+
+```shell
+sudo npm rm --global npm-package
+```
+
+```shell
+// 查找yarn在当前版本node中的完整安装路径
+where yarn 
+
+sudo rm -rf npm-packge
+```
+
+npm 设置淘宝源
+
+```shell
+# npm 设置淘宝源
+npm config set registry https://registry.npm.taobao.org
+```
+
+npm 还原官网源地址
+```shell
+# npm 还原官网源地址
+npm config set registry https://registry.npmjs.org/
+```
+

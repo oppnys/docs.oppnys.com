@@ -55,7 +55,7 @@ java -version
 添加端口
 
 ```shell
-firewall-cmd --permanent --zone=public --add-port=8848/tcp
+firewall-cmd --permanent --zone=public --add-port=42616/tcp
 ```
 
 删除端口

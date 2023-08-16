@@ -14,16 +14,21 @@ module.exports = {
                 link: '/',
             },
             {
-                text: 'HTML',
-                link: '/html/',
-            },
-            {
-                text: 'CSS',
-                link: '/css/',
-            },
-            {
-                text: 'JavaScript',
-                link: '/javascript/'
+                text: "前端基础",
+                children: [
+                    {
+                        text: 'HTML',
+                        link: '/html/',
+                    },
+                    {
+                        text: 'CSS',
+                        link: '/css/',
+                    },
+                    {
+                        text: 'JavaScript',
+                        link: '/javascript/'
+                    }
+                ]
             },
             {
                 text: '前端框架',
@@ -56,20 +61,43 @@ module.exports = {
                 ]
             },
             {
-                text: '数据结构与算法',
-                link: '/algorithm/'
+                text: '计算机基础',
+                children: [
+                    {
+                        text: '数据结构与算法',
+                        link: '/algorithm/'
+                    },
+                    {
+                        text: '计算机网络',
+                        link: '/network/'
+                    }
+                ]
             },
             {
-                text: '计算机网络',
-                link: '/network/'
+                text: '服务端开发',
+                children: [
+                    {
+                        text: 'node.js',
+                        link: '/node.js/'
+                    },
+                    {
+                        text: 'linux',
+                        link: '/linux/'
+                    },
+                ]
             },
             {
-                text: 'node.js',
-                link: '/node.js/'
-            },
-            {
-                text: 'Linux',
-                link: '/linux/'
+                text: '好书',
+                children: [
+                    {
+                        text: '你不知道的JavaScript',
+                        link: '/you-dont-know-javascript/'
+                    },
+                    {
+                        text: 'ECMAScript6 入门教程',
+                        link: '/es6/'
+                    },
+                ]
             },
             {
                 text: '随笔',

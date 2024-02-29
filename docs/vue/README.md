@@ -117,14 +117,14 @@ Vue.directive("focus", {
 directives: {
   focus: {
     // 指令的定义
-    inserted: function (el) {
+    inserted: function(el) {
       el.focus()
     }
   }
 }
 ```
 
-- 指令的 hooks
+- 指令的指令
 
   - `bind`: 只调用一次，指令第一次绑定到元素时调用。在这里可以进行一次性的初始化设置。
   - `inserted`: 被绑定元素插入父节点时调用 (仅保证父节点存在，但不一定已被插入文档中)。
@@ -186,7 +186,7 @@ directives: {
 - 路由懒加载
 
   ```js
-  import("/pages/second.vue");
+  () => import("/pages/second.vue");
   ```
 
 - 为减少重新渲染和创建 dom 节点的时间，采用虚拟 dom。
@@ -213,7 +213,8 @@ directives: {
 
 ### diff 算法
 
-- vue2.0 的 diff 算法来源于 snabbdom，复杂度为 O(n)。 diff 算法是指对新旧 `vdom` 进行对比，并返回一个 patch 对象，用来存储两个节点不同的地方，最后利用 `patch` 记录的消息局部更新 DOM。diff 算法特点：
+- vue2.0 的 diff 算法来源于 snabbdom，复杂度为 O(n)。 diff 算法是指对新旧 `vdom` 进行对比，并返回一个 patch 对象，用
+来存储两个节点不同的地方，最后利用 `patch` 记录的消息局部更新 DOM。diff 算法特点：
 
   1. 先去同级比较，然后再去比较子节点.
   2. 先去判断一方有子节点一方没有子节点的情况.
@@ -222,7 +223,8 @@ directives: {
 
 ### Vue 的 Key 的作用
 
-key 主要用在虚拟 Dom 算法中，每个虚拟节点 VNode 有一个唯一标识 Key，通过对比新旧节点的 key 来判断节点是否改变，用 key 就可以大大提高渲染效率，这个 key 类似于缓存中的 etag。
+key 主要用在虚拟 Dom 算法中，每个虚拟节点 VNode 有一个唯一标识 Key，通过对比新旧节点的 key 来判断节点是否改变，用 key 就可
+以大大提高渲染效率，这个 key 类似于缓存中的 etag。
 
 ### 虚拟 DOM 的优缺点
 

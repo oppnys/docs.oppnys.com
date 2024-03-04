@@ -1,7 +1,7 @@
 module.exports = {
     // 站点配置
     lang: 'zh-CN',
-    title: 'oppnys document',
+    title: 'oppnys docs',
     description: '这是我的第一个 VuePress 站点',
     head: [],
     // 主题和它的配置
@@ -113,28 +113,4 @@ module.exports = {
         contributorsText: '作者',
         lastUpdatedText: '更新时间'
     }
-    // plugins: [
-    //     ['@vuepress/docsearch', {
-    //         apiKey: '790e17cfe1a90b77b83aa6b9f4b83b32',
-    //         indexName: 'oppnys',
-    //         locales: {
-    //             '/': {
-    //                 placeholder: '搜索文档',
-    //                 translations: {
-    //                     button: {
-    //                         buttonText: '搜索文档',
-    //                     },
-    //                 },
-    //             },
-    //             '/zh/': {
-    //                 placeholder: '搜索文档',
-    //                 translations: {
-    //                     button: {
-    //                         buttonText: '搜索文档',
-    //                     },
-    //                 },
-    //             },
-    //         },
-    //     }]
-    // ]
 }
